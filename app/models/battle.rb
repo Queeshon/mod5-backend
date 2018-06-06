@@ -1,4 +1,4 @@
 class Battle < ApplicationRecord
-  has_many :images
-  has_many :users, through: :images
+  has_many :battlelogs
+  has_many :users, through: :battlelogs
 end
