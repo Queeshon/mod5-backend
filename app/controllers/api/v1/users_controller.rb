@@ -8,16 +8,25 @@ class Api::V1::UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     if @user.save
-      render json: @user
+      render json: {
+        username: @user.username,
+        token: generate_token(@user),
+        user_id: @user.id,
+        avatar: @user.avatar,
+        cute_pic: @user.cute_pic,
+        wins: 0
+      }
     else
-      render json: @user.errors
+      render json: {
+        errors: @user.errors.full_messages
+      }, status: :unprocessable_entity
     end
   end
 
   def update
-    @user = User.find(params[:id])
+    @user = User.find_by(id: params[:id])
     @user.update(user_params)
-    if @user.save
+    if authorized?(@user)
       render json: @user
     else
       render json: @user.errors
@@ -31,7 +40,7 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :username, :avatar, :wins, :cute_pic)
+    params.permit(:name, :username, :password, :avatar, :wins, :cute_pic)
   end
 
 end

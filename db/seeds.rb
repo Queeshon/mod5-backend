@@ -1,7 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+christian = User.create(name: "Christian Kim", username: "queeshon", password: "hello", cute_pic: "http://cdn.earthporm.com/wp-content/uploads/2014/12/unusual-animal-friendship-53__880.jpg")
+alice = User.create(name: "Alice Lin", username: "goldtacos", password: "hello", cute_pic: "http://static.inspiremore.com/wp-content/uploads/2015/07/10064345/deer-cat.jpg")
+arthur = User.create(name: "Arthur Lurye", username: "secondplace", password: "hello", cute_pic: "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/22729099_10101647629828575_3853022034179036363_n.jpg?_nc_cat=0&oh=45e5c0c93934b9bf0de0d3ce1cced5a3&oe=5BA9BC9D")
+eric = User.create(name: "Eric Kim", username: "postmalone", password: "hello", cute_pic: "http://www.funnycatvideosforkids.com/wp-content/uploads/2017/02/funny-cats-fails-compilation-try-not-to-laugh-cute-cats-funny-compilation.jpg")
+
+battle1 = Battle.create(category: "cute", users: [christian, alice])
+battle2 = Battle.create(category: "cute", users: [christian, eric])
+battle3 = Battle.create(category: "cute", users: [arthur, eric])
+
+like1 = Like.create(user: christian, battle: battle1)
+like2 = Like.create(user: christian, battle: battle1)
+like3 = Like.create(user: christian, battle: battle1)
+like4 = Like.create(user: alice, battle: battle1)
+like5 = Like.create(user: alice, battle: battle1)
+like6 = Like.create(user: christian, battle: battle1)
+like7 = Like.create(user: christian, battle: battle1)
+like8 = Like.create(user: christian, battle: battle1)
