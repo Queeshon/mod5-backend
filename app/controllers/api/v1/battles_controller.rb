@@ -1,14 +1,10 @@
 class Api::V1::BattlesController < ApplicationController
 
   def index
-    if valid_token?
-      @battles = Battle.all
-      newBattles = []
-      @battles.each { |battle| newBattles.push({ battle: battle, users: battle.users, likes: battle.likes }) }
-      render json: newBattles
-    else
-      render json: { go_away: true }, status: :unauthorized
-    end
+    @battles = Battle.all
+    newBattles = []
+    @battles.each { |battle| newBattles.push({ battle: battle, users: battle.users, likes: battle.likes }) }
+    render json: newBattles
   end
 
   def create
