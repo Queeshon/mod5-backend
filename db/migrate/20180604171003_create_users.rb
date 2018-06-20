@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :password_digest
       t.string :username
       t.string :avatar
-      t.integer :wins
+      t.integer :wins, default: 0
       t.string :cute_pic
 
       t.timestamps

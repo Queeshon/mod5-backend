@@ -14,7 +14,7 @@ class Api::V1::UsersController < ApplicationController
         user_id: @user.id,
         avatar: @user.avatar,
         cute_pic: @user.cute_pic,
-        wins: 0
+        wins: @user.wins
       }
     else
       render json: {
