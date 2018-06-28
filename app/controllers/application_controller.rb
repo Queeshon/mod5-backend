@@ -11,6 +11,7 @@ class ApplicationController < ActionController::API
       user_id: user.id,
       avatar: user.avatar,
       cute_pic: user.cute_pic,
+      ugly_pic: user.ugly_pic,
       token: generate_token(user),
       wins: user.wins
     }

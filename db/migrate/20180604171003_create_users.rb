@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :avatar
       t.integer :wins, default: 0
       t.string :cute_pic
+      t.string :ugly_pic
 
       t.timestamps
     end

@@ -45,8 +45,9 @@ ActiveRecord::Schema.define(version: 20180617153547) do
     t.string "password_digest"
     t.string "username"
     t.string "avatar"
-    t.integer "wins"
+    t.integer "wins", default: 0
     t.string "cute_pic"
+    t.string "ugly_pic"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

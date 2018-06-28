@@ -9,6 +9,7 @@ class Api::V1::UsersController < ApplicationController
     @user = User.create(user_params)
     if @user.save
       render json: {
+        name: @user.name,
         username: @user.username,
         token: generate_token(@user),
         user_id: @user.id,
