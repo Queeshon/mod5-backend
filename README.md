@@ -1,24 +1,18 @@
-# README
+## CUTE OR BOOT (backend)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Who has the best aesthetic? With Cute or Boot, users can upload pictures to 'battle' with other users. These battles are head-to-head matches between two users' pictures where all other users can like either picture. The first picture to reach 20 likes wins!
 
-Things you may want to cover:
+## Concerns and Issues
 
-* Ruby version
+* Fix user deletion
+* Add battle royale functionality
+* Would like to introduce different picture categories, not just cute pictures
+* Refactoring and cleaning up of code
 
-* System dependencies
+## Video Demo
 
-* Configuration
+Click [here](https://www.youtube.com/watch?v=mOt370i588M&feature=youtu.be) for a video demonstration of the project.
 
-* Database creation
+### Contributors Guide
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I am not taking contributions at this time.
